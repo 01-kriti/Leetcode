@@ -35,6 +35,9 @@
 //     }
 // };
 
+class Solution{
+public:
+    
 int first(vector<int>&arr,int n,int x){
 	int ans=-1;
 	int low=0,high=n-1;
@@ -63,9 +66,6 @@ int last(vector<int>&arr,int n,int x){
 	}
 	return ans;
 }
-
-class Solution{
-public:
 
     vector<int>searchRange(vector<int>&arr,int k){
         int n=arr.size();
