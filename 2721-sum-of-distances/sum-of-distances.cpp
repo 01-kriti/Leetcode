@@ -14,14 +14,12 @@ public:
         }
         vector<long long> ans(n, 0);
         for(auto& [x, v]: idx){
-        //    cout<<"x="<<x<<":"; print(v);
             int vs=v.size();
             if (vs==1) continue;
             vector<long long> sum(vs+1);
             for(int i=0; i<vs; i++){
                 sum[i+1]=sum[i]+v[i];
             }
-        //    cout<<"sum"<<":"; print(sum);
             for(int i=0; i<vs; i++){
                 ans[v[i]] = sum.back()-2LL*sum[i] - (vs-2LL*i) * v[i];
 
@@ -31,12 +29,3 @@ public:
         return ans;
     }
 };
-
-
-
-auto init = []() {
-    ios::sync_with_stdio(0);
-    cin.tie(0);
-    cout.tie(0);
-    return 'c';
-}();
